@@ -15,7 +15,7 @@ async function loadEnvVariables() {
         // Обновляем элементы на странице
         const whatsappElement = document.getElementById('whatsapp');
         const numAndNameElement = document.getElementById('numAndName');
-        
+         
         if (whatsappElement) {
             whatsappElement.textContent = `ватсап +${window.env.PHONE}`;
         }
