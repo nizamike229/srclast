@@ -23,10 +23,16 @@ async function loadEnvVariables() {
         if (numAndNameElement) {
             numAndNameElement.textContent = `${window.env.NAME} ${window.env.PHONE}`;
         }
+
+        return data; // Возвращаем данные для возможности ожидания загрузки
     } catch (error) {
         console.error('Ошибка при загрузке переменных окружения:', error);
+        throw error;
     }
 }
+
+// Экспортируем функцию для использования в других скриптах
+window.loadEnvVariables = loadEnvVariables;
 
 // Загружаем переменные при загрузке страницы
 document.addEventListener('DOMContentLoaded', loadEnvVariables); 
