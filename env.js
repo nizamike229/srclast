@@ -9,7 +9,6 @@ async function loadEnvVariables() {
     try {
         const response = await fetch('/_vars');
         const data = await response.json();
-        console.log(data);
         window.env.NAME = data.NAME || '';
         window.env.PHONE = data.PHONE || '';
         
