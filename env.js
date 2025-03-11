@@ -21,7 +21,7 @@ async function loadEnvVariables() {
         }
         
         if (numAndNameElement) {
-            numAndNameElement.textContent = `${window.env.NAME} ${window.env.PHONE}`;
+            numAndNameElement.textContent = `${window.env.NAME} +${window.env.PHONE}`;
         }
 
         return data; // Возвращаем данные для возможности ожидания загрузки
